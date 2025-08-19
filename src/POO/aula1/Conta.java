@@ -4,10 +4,42 @@ import java.util.Scanner;
 
 //Classe servi de molde
 public class Conta {
-    int numero;
-    String titular;
-    double saldo;
+   private int numero;
+   private String titular;
+   private double saldo;
     double ValorDeposito;
+    //Getter - para pegar o conteudo da variavel
+    public int getNumero() {
+        return numero;
+    }
+    //Setter - setar o conteudo(declarar , atribuir)
+    public void setNumero(int numero){
+        this.numero = numero;
+    }
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setValorDeposito(double valorDeposito) {
+        ValorDeposito = valorDeposito;
+    }
+
+    public double getValorDeposito() {
+        return ValorDeposito;
+    }
+
     //Função da conta
     public void imprimirDados(){//conta.imprimirDados();
         System.out.println("*** Dados da Conta ***");
@@ -36,4 +68,5 @@ public class Conta {
         this.saldo += ValorDeposito;
         System.out.println("Saldo Atual: "+this.saldo);
     }
+
 }
